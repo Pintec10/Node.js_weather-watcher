@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "sass": "^1.26.3"
