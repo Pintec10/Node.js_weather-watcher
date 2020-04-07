@@ -64,3 +64,42 @@ h1 {
     width: 400px;
 } 
 
+
+
+/* FORM AND WEATHER DISPLAY */
+
+input {
+    border: 1px solid #809DA7;
+    border: 1px solid rgba(239, 240, 235, 0.55);
+    background-color: #5C809A ;
+    color: #EFF0EB;
+    padding: 5px 10px;
+    margin: 10px;
+    margin-left: 0;
+    border-radius: 2px;
+}
+
+input::placeholder {
+    color: #809DA7;
+    color: rgba(239, 240, 235, 0.55);
+}
+
+form button {
+    border: 1px solid #5C809A;
+    color: #EFF0EB;
+    background-color: #232F31;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#msg1 {
+    font-size: large;
+    font-weight: bold;
+    color: #5C809A;
+}
+
+#msg2 {
+    color: #232F31;
+}
