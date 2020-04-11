@@ -21,10 +21,11 @@ if (weatherForm !== null) {
                     msg2.textContent = data.error;
                 }
                 else {
-                    const { dailySummary, currentTemperature, currentPrecipProbability } = data.forecastData;
+                    const { dailySummary, currentTemperature, currentPrecipProbability, temperatureHigh, temperatureLow } = data.forecastData;
                     msg1.textContent = data.location;
                     msg2.innerHTML = `${dailySummary} <br>
-                                    Currently the temperature is ${currentTemperature} degrees, with a ${currentPrecipProbability}% chance of rain.`
+                                    Currently the temperature is ${currentTemperature} degrees, with a ${currentPrecipProbability}% chance of rain. <br>
+                                    The lowest temperature today was ${temperatureLow} degrees, and the highest was ${temperatureHigh} degrees.`;
                     console.log(data.location);
                     console.log(data.forecastData);
                 }
