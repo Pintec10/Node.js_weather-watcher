@@ -29,7 +29,8 @@ h1 {
 
 
 .content-wrapper {
-    padding: 5vh 5vw;
+    margin: 30px 0;
+    padding: 5vh 10vw;
     flex-grow: 1;
 }
 
@@ -80,11 +81,14 @@ h1 {
 
 
 .img200 {
-    width: 400px;
-    margin-right: 50px;
+    max-height: 40vh;
+    margin-left: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 } 
 
+.left {
+    margin: 0 50px 0 0 ;
+}
 
 
 /* FORM AND WEATHER DISPLAY */

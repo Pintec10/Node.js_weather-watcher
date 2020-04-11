@@ -41,7 +41,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Need Help?',
         author: 'Roberto Milani',
-        helpMessage: 'Just write any location in the search bar and push the Get Weather button!'
+        helpMessage: 'Just go to the \'Home\' page, write any location in the search bar and push the \'Get Weather\' button!'
     })
 });
 
