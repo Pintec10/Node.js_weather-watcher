@@ -1,4 +1,4 @@
-console.log('js loaded and running');
+console.log('js loaded and running!');
 
 
 const weatherForm = document.querySelector('form');
@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (ev) => {
     msg1.textContent = 'Checking the weather, please wait...';
     msg2.textContent = '';
 
-    fetch('http://localhost:3000/weather?address=' + searchInput.value)
+    fetch('/weather?address=' + searchInput.value)
         .then(resp => resp.json())
         .then(data => {
             if (data.error) {
@@ -22,22 +22,10 @@ weatherForm.addEventListener('submit', (ev) => {
             else {
                 const { dailySummary, currentTemperature, currentPrecipProbability } = data.forecastData;
                 msg1.textContent = data.location;
-                msg2.textContent = `${dailySummary} 
+                msg2.innerHTML = `${dailySummary} <br>
                                     Currently the temperature is ${currentTemperature} degrees, with a ${currentPrecipProbability}% chance of rain.`
                 console.log(data.location);
                 console.log(data.forecastData);
             }
         });
 })
-
-
-
-// fetch('http://localhost:3000/weather?address=Padova')
-//     .then(resp => resp.json())
-//     .then(data => {
-//         if (data.error) { console.log(data.error) }
-//         else {
-//             console.log(data.location);
-//             console.log(data.forecastData);
-//         }
-//     })

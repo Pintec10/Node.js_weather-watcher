@@ -7,6 +7,9 @@ const forecast = require('./utils/forecast');
 
 const app = express();
 
+//sets up port for Heroku frmo environment variable, or 3000 as fallback in local
+const port = process.env.PORT || 3000;
+
 //paths for Express config
 const publicDirPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -36,9 +39,9 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Get some Help',
+        title: 'Need Help?',
         author: 'Roberto Milani',
-        helpMessage: 'this is a placeholder help message'
+        helpMessage: 'Just write any location in the search bar and push the Get Weather button!'
     })
 });
 
@@ -97,7 +100,6 @@ app.get('*', (req, res) => {
 });
 
 
-
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
+app.listen(port, () => {
+    console.log('Server running on port' + port);
 });

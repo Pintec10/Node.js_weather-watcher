@@ -16,10 +16,29 @@ h1 {
     text-align: center;
 }
 
+.title-icon {    
+    /* border: 1px solid green; */
+    display: inline-block;
+    height: 1.2em;
+}
+
+.title-icon img {
+    height: 100%;
+    object-fit: contain;
+}
+
 
 .content-wrapper {
     padding: 5vh 5vw;
     flex-grow: 1;
+}
+
+.flex-hor {
+    display: flex;   
+}
+
+.space-between{
+    justify-content: space-between;
 }
 
 
@@ -62,6 +81,8 @@ h1 {
 
 .img200 {
     width: 400px;
+    margin-right: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 } 
 
 

@@ -10,17 +10,20 @@
 <body>
     {{>header}}
 
-    <div class="content-wrapper">
+    <div class="content-wrapper flex-hor space-between">
         <div>
-            <form>
-                <input type="text" placeholder="Select a location..."></input>
-                <button type="submit">Get weather</button>
-            </form>
+            <div>
+                <form>
+                    <input type="text" placeholder="Select a location..."></input>
+                    <button type="submit">Get weather</button>
+                </form>
+            </div>
+            <div>
+                <p id="msg1"></p>
+                <p id="msg2"></p>
+            </div>
         </div>
-        <div>
-            <p id="msg1"></p>
-            <p id="msg2"></p>
-        </div>
+        <img class="img200" src="./img/lighthouse.jpg" />
 
     </div>
     {{>footer}}
